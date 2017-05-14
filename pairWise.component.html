@@ -1,0 +1,56 @@
+<div class='panel panel-primary'>
+    <div class='panel-heading'>
+        <h1>{{pageTitle}}</h1>
+        <h3>{{pageDescription}}</h3>
+
+    </div>
+    <div class='panel-body'>
+        <section>
+            <p>Array values:</p>
+            <ul><!--Display the arrays of elements for evaluate-->
+                <li *ngFor="let items of pairWiseNumbers">
+                    {{ items }}
+                </li>
+            </ul>
+            <p>Array Index:</p>
+            <ul><!--Display the index of elements for evaluate-->
+                <li *ngFor="let items of pairWiseNumbers; let i = index">
+                    {{ i }}
+                </li>
+            </ul>
+        </section>
+        <section>
+            <div class='table-responsive'>
+                <table class='table'>
+                    <thead>
+                        <tr>
+                            <th>Pairs</th>
+                            <th>Suma de pares</th>
+                            <th>Posiciones Arreglo</th>
+                            <th>Suma posiciones</th>
+
+                        </tr>
+                    </thead>
+                    <tr *ngFor="let valores of pairWise">
+                        <td>{{ valores.firstElement }} + {{valores.secondElement}} </td>
+                        <td>{{valores.sumElements}}</td>
+                        <td>{{ valores.posFirstElement }} + {{ valores.posSecondElement }} </td>
+                        <td>{{ valores.sumPositions }} </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section>
+            <!--Represent the sum of the total of the 
+            positions of the elements whose sum equal the second argument arg-->
+            
+            <div><h3>Total of index positions: {{totalGeneralIndices}}</h3></div>
+        </section>
+
+        <section>
+            <!--Click on this button for view the results-->
+            <div>Please click of the below button for see the result for this pairs of elements</div>
+            <button (click)='DisplayResults();' type="button" class="btn btn-primary">Click for results</button>
+        </section>
+    </div>
+</div>
