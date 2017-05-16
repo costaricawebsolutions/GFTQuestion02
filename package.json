@@ -2,7 +2,7 @@
     "name": "product-management",
     "version": "1.0.0",
     "author": "Geovanny Quesada",
-    "description": "Angular Senior Developer Test for GFC
+    "description": "Angular Senior Developer Test for GFC"
     "scripts": {
         "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
         "tsc": "tsc",
